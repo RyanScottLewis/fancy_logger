@@ -53,7 +53,7 @@ LOGGER.unknown("Weird unknown stuff")
 
 #### Output
 
-<img src="http://s16.postimage.org/q2omon1s3/fancy_logger_repeat.gif"></img>
+<img src="http://oi44.tinypic.com/sfwlkp.jpg"></img>
 
 ### Default Config
 
