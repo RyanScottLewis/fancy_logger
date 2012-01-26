@@ -40,6 +40,7 @@ Gem::Specification.new do |s|
   # This is required for your gem to work:
   # s.add_dependency("some_required_gem", "~> 0.1.0")
   # This is required for developers to build and test your gem:
+  s.add_dependency("bundler", "~> 1.0.21")
   s.add_dependency("rainbow", "~> 1.1.3")
   s.add_dependency("outline", "~> 0.1.5")
   s.add_development_dependency("rspec", "~> 2.6.0")

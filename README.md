@@ -43,8 +43,17 @@ LOGGER.config do
   end
 end
 
-LOGGER.info "Hello"
+LOGGER.debug("Look here!")
+LOGGER.info("Doing things...")
+LOGGER.warn("Watch out!")
+LOGGER.error("Bad")
+LOGGER.fatal("VERY bad")
+LOGGER.unknown("Weird unknown stuff")
 ```
+
+#### Output
+
+<img src="http://s16.postimage.org/q2omon1s3/fancy_logger_repeat.gif"></img>
 
 ### Default Config
 

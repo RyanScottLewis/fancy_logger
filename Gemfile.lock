@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    fancy_logger (0.0.1)
+    fancy_logger (0.0.2)
+      bundler (~> 1.0.21)
       outline (~> 0.1.5)
       rainbow (~> 1.1.3)
 
