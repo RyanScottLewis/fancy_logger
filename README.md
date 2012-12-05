@@ -31,7 +31,6 @@ logger.config do
   
   styles do
     info do
-      foreground :yellow
       blink true
     end
   end
@@ -48,6 +47,8 @@ logger.unknown 'Weird unknown stuff'
 #### Output
 
 ![][output_example]
+
+The WARN error now blinks! Horray!
 
 ### Config
 
@@ -107,7 +108,6 @@ styles do
   warn do
     foreground :yellow
     background :default
-    blink true
   end
   
   error do
@@ -125,7 +125,6 @@ styles do
   unknown do
     foreground :black
     background :white
-    underline true
   end
 end
 ```
