@@ -28,6 +28,7 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency 'rb-fsevent', '~> 0.9'
   s.add_development_dependency 'fuubar', '~> 1.1'
   s.add_development_dependency 'redcarpet', '~> 2.2.2'
+  s.add_development_dependency 'rake', '~> 10.0'
   s.add_development_dependency 'github-markup', '~> 0.7'
   
   # Pragmatically set variables

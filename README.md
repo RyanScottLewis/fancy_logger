@@ -1,6 +1,6 @@
-# fancy_logger
+# Fancy Logger
 
-An easily customize Logger with style.
+An easily customizable logger with style.
 
 ## Install
 
@@ -15,7 +15,7 @@ Simply use as if you were using the normal Ruby `Logger` class:
 ```ruby
 require 'fancy_logger'
 
-logger = Logger.new(STDOUT)
+logger = FancyLogger.new(STDOUT)
 logger.info "Hello"
 ```
 
@@ -63,52 +63,36 @@ timestamp_format "%F %r"
 show_help_message true
 
 # Under styles, you have a configuration for each severity.
-# Each severity has a configuration with the following valid
-# options:
-#   Key:
-#     foreground
+# Each severity has a configuration with the following valid options:
+#   Key: foreground
 #   Value:
-#     :black, :red, :green, :yellow, :blue, :magenta, :cyan, :white, or :default
+#     :default, :black, :red, :green, :yellow, :blue, :magenta, :cyan, :white
 #   
-#   Key:
-#     background
+#   Key: background
 #   Value:
-#     :black, :red, :green, :yellow, :blue, :magenta, :cyan, :white, :default
+#     :default, :black, :red, :green, :yellow, :blue, :magenta, :cyan, :white
 #   
-#   Key:
-#     reset
-#   Value:
-#     true or false
+#   Key: reset
+#   Value: true or false
 #   
-#   Key:
-#     bright
-#   Value:
-#     true or false
+#   Key: bright
+#   Value: true or false
 #   
-#   Key:
-#     italic
-#   Value:
-#     true or false
+#   Key: italic
+#   Value: true or false
 #   
-#   Key:
-#     underline
-#   Value:
-#     true or false
+#   Key: underline
+#   Value: true or false
 #   
 #   Key:
 #     blink
-#   Value:
-#     true or false
+#   Value: true or false
 #   
-#   Key:
-#     inverse
-#   Value:
-#     true or false
+#   Key: inverse
+#   Value: true or false
 #   
-#   Key:
-#     hide
-#   Value:
-#     true or false
+#   Key: hide
+#   Value: true or false
 styles do
   debug do
     foreground :black
@@ -144,11 +128,6 @@ styles do
     underline true
   end
 end
-```
-
-
-```ruby
-
 ```
 
 ## Contributing
