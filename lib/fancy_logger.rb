@@ -22,7 +22,6 @@ class FancyLogger < Logger
         warn do
           foreground :yellow
           background :default
-          blink true
         end
         
         error do
@@ -40,7 +39,6 @@ class FancyLogger < Logger
         unknown do
           foreground :black
           background :white
-          underline true
         end
       end
     end
