@@ -59,7 +59,7 @@ class FancyLogger < Logger
     message = "Log Styles:\n"
     
     config.styles.to_h.keys.each do |severity|
-      message += "  #{styled_string(severity, severity)}\n"
+      message += " #{styled_string(severity, severity)}"
     end
     
     message += "\n\n"
@@ -79,6 +79,8 @@ class FancyLogger < Logger
       timestamp = styled_timestamp(severity, timestamp)
       
       message += "[#{timestamp}] #{msg}\n"
+    else
+      super
     end
   end
   

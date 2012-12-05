@@ -1,38 +1,32 @@
 # fancy_logger
 
-An easily customizable logger with style.
+An easily customize Logger with style.
 
-## Installing
+## Install
 
-Add to your `Gemfile`:
+### Bundler: `gem 'fancy_logger'`
 
-```ruby
-gem 'fancy_logger'
-```
+### RubyGems: `gem install fancy_logger`
 
-Or simply:
-
-```bash
-$ gem install fancy_logger
-````
-
-## Examples
+## Usage
 
 Simply use as if you were using the normal Ruby `Logger` class:
 
 ```ruby
 require 'fancy_logger'
 
-LOGGER = FancyLogger.new(STDOUT)
-LOGGER.info "Hello"
+logger = Logger.new(STDOUT)
+logger.info "Hello"
 ```
 
 ### Config
 
+The `config` instance method allows you to modify the configuration of the Logger within a DSL.
+
 Continuing with our last example:
 
 ```ruby
-LOGGER.config do
+logger.config do
   timestamp_format "%c"
   
   styles do
@@ -43,19 +37,20 @@ LOGGER.config do
   end
 end
 
-LOGGER.debug("Look here!")
-LOGGER.info("Doing things...")
-LOGGER.warn("Watch out!")
-LOGGER.error("Bad")
-LOGGER.fatal("VERY bad")
-LOGGER.unknown("Weird unknown stuff")
+logger.debug   'Look here!'
+logger.info    'Doing things...'
+logger.warn    'Watch out!'
+logger.error   'Bad'
+logger.fatal   'VERY bad'
+logger.unknown 'Weird unknown stuff'
 ```
 
 #### Output
 
-<img src="http://oi44.tinypic.com/sfwlkp.jpg"></img>
+![][output_example]
 
-### Default Config
+### Config
+
 
 ```ruby
 # The format of the timestamp in the log. Follows the strftime standards.
@@ -150,3 +145,26 @@ styles do
   end
 end
 ```
+
+
+```ruby
+
+```
+
+## Contributing
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start or switch to a testing/unstable/feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, VERSION or gemspec.
+
+## Copyright
+
+Copyright © 2012 Ryan Scott Lewis <ryan@rynet.us>.
+
+The MIT License (MIT) - See LICENSE for further details.
+
+[output_example]: http://oi44.tinypic.com/sfwlkp.jpg
