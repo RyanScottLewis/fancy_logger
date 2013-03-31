@@ -19,6 +19,17 @@ logger = FancyLogger.new(STDOUT)
 logger.info "Hello"
 ```
 
+**Rails**
+
+* Add `gem 'fancy_logger'` to the `:development` group in your `Gemfile`.
+* Add the following to your `config/environments/development.rb` within the `configure` block: 
+
+```ruby
+config.logger = FancyLogger.new(STDOUT)
+```
+
+* Enjoy your fancy logger within Rails.
+
 ### Config
 
 The `config` instance method allows you to modify the configuration of the Logger within a DSL.
